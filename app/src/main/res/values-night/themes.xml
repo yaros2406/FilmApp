@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="Theme.FilmApp" parent="Theme.BaseTheme">
+        <item name="colorPrimary">#06371F</item>
+        <item name="colorPrimaryVariant">#0C4C2D</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="directFilmCard">@color/gray_700</item>
+    </style>
+</resources>

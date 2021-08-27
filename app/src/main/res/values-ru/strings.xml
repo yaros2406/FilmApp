@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FilmApp</string>
+    <string name="cd_poster">Изображение</string>
+    <string name="cd_app_icon">Значок приложения</string>
+    <string name="text_rating">&lt;b>Рейтинг:&lt;/b> %1$s</string>
+    <string name="title_overview">Описание</string>
+    <string name="text_genres">&lt;b>%1$s:&lt;/b> %2$s</string>
+    <string name="text_release_date">&lt;b>Дата выхода:&lt;/b> %1$s</string>
+    <string name="action_watch">Смотреть</string>
+    <string name="text_empty">Ничего не найдено</string>
+    <string name="error_message">Ошибка</string>
+
+</resources>

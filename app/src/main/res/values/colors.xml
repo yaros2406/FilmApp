@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="gradient_light">?backgroundGradient</color>
+
+    <color name="red_400">#FFF94D4C</color>
+    <color name="red_500">#FFFF3B30</color>
+    <color name="gold">#FFEB3B</color>
+    <color name="yellow_600">#FFFFD60A</color>
+
+    <color name="green_300">#FFA1FF8B</color>
+    <color name="green_400">#5ED542</color>
+    <color name="green_500">#FF66982C</color>
+    <color name="green_700">#FF009A22</color>
+    <color name="teal_300">#FF21BDB8</color>
+
+    <color name="blue_100">#8693DF</color>
+    <color name="blue_200">#6576D8</color>
+    <color name="blue_250">#FF3F93FF</color>
+    <color name="blue_500">#3D5AFE</color>
+    <color name="blue_700">#2A40B8</color>
+    <color name="blue_900">#10238F</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_100">#FFF5F5F5</color>
+    <color name="gray_300">#FFE0E0E0</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_500">#FF9E9E9E</color>
+    <color name="gray_700">#FF616161</color>
+    <color name="gray_700_80">#CC616161</color>
+    <color name="gray_800">#FF424242</color>
+    <color name="gray_900">#FF212121</color>
+    <color name="black">#FF000000</color>
+
+</resources>
