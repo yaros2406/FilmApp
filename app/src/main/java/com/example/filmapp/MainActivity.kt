@@ -4,12 +4,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.filmapp.core.MainRouter
-import com.example.filmapp.onefilmscreen.ui.fragment.OneFilmFragment
 import com.example.filmapp.filmlistscreen.ui.fragment.FilmListFragment
 import com.example.filmapp.filmlistscreen.ui.model.FilmUi
 import com.example.filmapp.filmplayer.ui.fragment.FilmPlayerFragment
+import com.example.filmapp.onefilmscreen.ui.fragment.OneFilmFragment
 
 class MainActivity : AppCompatActivity(), MainRouter {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,7 +24,9 @@ class MainActivity : AppCompatActivity(), MainRouter {
     }
 
     override fun showFilmPlayer(film: FilmUi) {
+
         showFragment(FilmPlayerFragment.newInstance(film))
+
     }
 
     private fun showFragment(fragment: Fragment) {

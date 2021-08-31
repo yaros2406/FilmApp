@@ -1,22 +1,22 @@
 package com.example.filmapp.filmplayer.ui.fragment
 
-
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.filmapp.R
+import com.example.filmapp.core.PlayerControl
 import com.example.filmapp.databinding.FragmentPlayerBinding
 import com.example.filmapp.filmlistscreen.ui.model.FilmUi
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.SimpleExoPlayer
 
-class FilmPlayerFragment : Fragment(R.layout.fragment_player) {
+class FilmPlayerFragment : Fragment(R.layout.fragment_player), PlayerControl {
 
     private val binding by viewBinding(FragmentPlayerBinding::bind)
 
-    private lateinit var player: SimpleExoPlayer
+      override lateinit var player: SimpleExoPlayer
 
     private var pausedPosition: Long = 0
 
@@ -29,25 +29,25 @@ class FilmPlayerFragment : Fragment(R.layout.fragment_player) {
 
         arguments?.getParcelable<FilmUi>(FILM_ARG)
             ?.takeIf { it.videoUrl.isNotBlank() }
-            ?.let { initializePlayer(it.videoUrl) } ?: showError()
-    }
+            ?.let { initializePlayer(it.videoUrl) } ?: showError() }
+
+    override fun playerPause() {
+        player.pauseAtEndOfMediaItems }
+
+    override fun releasePlayer() {
+        player.release()
+        binding.pvPlayer.player = null }
 
     override fun onPause() {
         super.onPause()
         pausedPosition = player.currentPosition
-        player.pause()
-    }
-
-    override fun onStop() {
-        super.onStop()
-        player.stop()
+        playerPause()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        player.release()
+        releasePlayer()
     }
-
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -80,3 +80,5 @@ class FilmPlayerFragment : Fragment(R.layout.fragment_player) {
         }
     }
 }
+
+
